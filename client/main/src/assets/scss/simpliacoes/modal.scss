@@ -1,0 +1,55 @@
+.modal-content {
+    border: 0;
+    @if $enable-rounded {
+        border-radius: $modal-content-border-radius;
+    } @else {
+        border-radius: 0;
+    }  
+}
+
+
+.modal-fluid {
+    .modal-dialog {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .modal-content {
+        border-radius: 0;
+    }
+}
+
+@each $color, $value in $theme-colors {
+    .modal-#{$color} {
+        @include modal-variant($value);
+    }
+}
+
+.modal-spoiler {
+    .modal-content {
+        border-radius: 30px;
+        border: 10px solid $primary;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        
+        .modal-body {
+            text-align: justify;
+        }
+    }
+
+    img.ebook {
+        width: 60%;
+    }
+}
+
+.modal-content-transparent {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; 
+  .spinner-wrapper {
+      text-align: center;
+      width: 100%;
+  }
+}

@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /preview/
+Disallow: /tos/
+Disallow: /privacidade/
+Disallow: /offline/
+
+Sitemap: https://simpliacoes.pt/sitemap.xml

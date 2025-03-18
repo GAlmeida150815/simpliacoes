@@ -1,0 +1,52 @@
+.title-text {
+    span {
+        font-size: 80%;
+    }
+
+    p {
+        text-align: justify;
+    }
+}
+
+.section-prod-spoiler {
+  background: linear-gradient(to bottom, #7B16A3, #269297);
+  img {
+    
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.025);
+    }
+  }
+  .ebook {
+      height: 25vh;
+      width: auto;
+  }
+}
+
+.section-hub {
+  background: linear-gradient(to bottom, #7B16A3, #269297);
+  img {
+    
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.025);
+    }
+  }
+  
+  p {
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.5rem; 
+  line-height: 1.3;
+  margin-top: 1rem;
+
+    span {
+      &.highlight-yellow {
+        color: #FFC107; 
+      }
+    }
+  }
+}

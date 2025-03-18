@@ -1,0 +1,319 @@
+$sidebar-width: 244px;
+$sidebar-background: #000;
+$sidebar-color: #fff;
+
+$sidebar-narrow-width: 72px;
+
+$nav-height: 55px;
+$nav-background: #000;
+$nav-color: #fff;
+
+.page-container {
+  padding: 0;
+  .page-sidebar {
+    &.narrow {
+      width: $sidebar-narrow-width;
+      .logo {
+        background-image: url("../../img/brand/logo512.png");
+        
+      } 
+      .nav-link-text {
+        display: none;
+      }
+      ~ .page-content{
+        margin-left: $sidebar-narrow-width;
+
+        .warning {
+          left: $sidebar-narrow-width;
+        }
+      }
+    }
+
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: $sidebar-width;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $sidebar-background;
+    border-right: mix(white, $nav-background, 30%) inset  2px;
+    padding: 1rem;
+    transition: width 0.3s ease;
+
+    .logo {
+      
+      margin-bottom: 2rem;
+      width: 100%;
+      height: 100px;
+
+      background-image: url('../../img/brand/logoTeste.png');
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .nav-links {
+      width: 100%;
+      text-align: center;
+      flex-grow: 1; 
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      
+    }
+
+    .nav-item {
+      margin: 1rem 0;
+      transition: background-color 0.3s ease, border-radius 0.3s ease;
+
+      .nav-link {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 0.5rem;
+        color: $sidebar-color;
+        text-decoration: none;
+        font-size: 1rem;
+        line-height: 5px;
+
+        svg {
+          font-size: 1.2rem;
+          margin-right: 0.5rem;
+        }
+
+        &.active {
+          font-weight: bold;
+        }
+      }
+      
+      &:hover {
+        background-color: mix($sidebar-background, $sidebar-color, 70%); 
+        border-radius: 10px;
+        svg {
+          transform: scale(1.1);
+        }
+      }
+      &:active {
+        background-color: mix($sidebar-color, #000, 80%); 
+        color: mix($sidebar-color, #000, 80%);
+        transform: scale(0.95); 
+        
+        svg {
+          transform: scale(0.9);
+        }
+      }
+    }
+
+    .bottom-nav-links {
+      width: 100%;
+      text-align: center;
+      margin-top: auto;
+    }
+    
+    .extender {
+      position: absolute;
+      right: -20px;
+      top: 50%;
+      background: $sidebar-background;
+      padding: 5px;
+      border-radius: 0 5px 5px;
+      border-right: mix(white, $nav-background, 30%) inset 2px;
+      a {
+        svg {
+          font-size: 15px;
+          color:$sidebar-color;
+          transition: transform 0.3s ease;
+
+          &:hover,
+          &.active {
+            transform: rotate(-180deg);
+          }
+
+          &.active:hover {
+            transform: rotate(0deg);
+          }
+        }
+      }
+    }
+
+  }
+
+  .page-content {
+    margin-left: $sidebar-width;
+    padding: 0;
+    position: relative;
+    z-index: 0;
+    transition: margin 0.3s ease;
+
+    .warning {
+      width: auto;
+      position: fixed;
+      right: 10px;
+      bottom: 0;
+      left: $sidebar-width;
+      z-index: 1030;
+      padding: 5px;
+
+      transition: left 0.3s ease;
+    }
+  }
+
+  //bottom nav
+  .page-bottom-nav {
+    height: $nav-height;
+    background-color: $nav-background;
+
+    //bottom sticky
+    position: sticky;
+    right: 0;
+    bottom: -5px;
+    left: 0;
+    z-index: 1030;
+
+    //border
+    border-top: mix(white, $nav-background, 30%) solid 2px;
+    .bot-nav-links{
+      .nav-link {
+        color: $nav-color;
+        font-size: 1.5rem;
+        transition: width 0.3s ease;
+
+        &:not(.active):active {
+          transform: scale(0.75);
+        }
+      }
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      height: 100%;
+    }
+  }
+
+  //navbar
+  .page-navbar {
+    background-color: $nav-background !important;
+    border: 0;
+    box-shadow: none;
+    position: absolute;
+    display: flex;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+
+    img {
+      max-height: 50px;
+      width: auto;
+    }
+
+    .nav-icons {
+      .nav-item {
+        font-size: 25px;
+        .nav-link{
+          color: $nav-color;
+          transition: width 0.3s ease;
+
+          &:active {
+            transform: scale(0.75);
+          }
+        }
+      }
+    }
+  }
+}
+
+.Toastify {
+  .Toastify__toast-container {
+    width: 25% !important;
+    .Toastify__toast {
+      border: 2px inset black;
+      color:white !important;
+      .cookie-toast {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+}
+
+.contacts-socials {
+  a {
+    background-color: black;
+    border: 2px solid rgb(100, 100, 100);
+    color: white;
+    border-radius: 5px;
+    font-size: 35px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: rgb(140, 140, 140);
+      border: 2px solid black;
+      color: black;
+    }
+  }
+}
+
+@media (max-width: 1263px) {
+  .page-container {
+    .page-sidebar {
+      width: $sidebar-narrow-width;
+      .logo {
+        background-image: url("../../img/brand/logo512.png");
+      } 
+      .nav-link-text,
+      .extender {
+        display: none;
+      }
+    }
+    .page-content {
+      margin-left: $sidebar-narrow-width;
+      padding: 0;
+    }
+  }
+  .Toastify {
+    .toast-position {
+      left: 50%;
+    }
+    .Toastify__toast-container {
+      width:50% !important;  
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    .page-content {
+      margin-left: 0;
+      .warning {
+        right: 0;
+        left: 0;
+        bottom: $nav-height;
+
+        font-size: 10px;
+      }
+    }
+  }
+  .Toastify {
+    .toast-position {
+      bottom: 75px;
+      left: 50% !important;
+    }
+    .Toastify__toast-container {
+      width:75% !important;  
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  
+  .Toastify {
+    .toast-position {
+      bottom: 75px;
+      left: 12.5% !important;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.ql-align-justify {
+  text-align: justify;
+}
+
+.ql-align-center {
+  text-align: center;
+}
+
+.ql-align-right {
+  text-align: right;
+}
+
+.post-container {
+  min-height: 80vh;
+}
+
+.post-content {
+  all: initial;
+  font-family: inherit;
+}
+.post-content img {
+  max-width: 100%;
+  height: auto;
+}/*# sourceMappingURL=post.css.map */

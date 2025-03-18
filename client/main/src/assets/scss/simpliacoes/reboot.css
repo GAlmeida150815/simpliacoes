@@ -1,0 +1,23 @@
+iframe {
+  border: 0;
+}
+
+figcaption,
+figure,
+main {
+  display: block;
+}
+
+main {
+  overflow: hidden;
+}
+
+strong {
+  font-weight: bold;
+}
+
+li {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.7;
+}/*# sourceMappingURL=reboot.css.map */

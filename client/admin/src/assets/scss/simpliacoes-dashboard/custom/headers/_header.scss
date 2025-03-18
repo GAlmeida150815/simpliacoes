@@ -1,0 +1,28 @@
+//
+// Header
+//
+
+.header {
+    position: relative;
+
+    .row {
+        position: relative
+    }    
+}
+
+.wop {
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    border-radius: 1vh;
+    background-color: rgba(0,0,0,0.5);
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white; 
+    &::before {
+        content: "Work on progress...";
+    }
+} 

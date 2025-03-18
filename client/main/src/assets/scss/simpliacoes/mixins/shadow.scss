@@ -1,0 +1,4 @@
+// Mixin for text-shadow
+@mixin text-shadow($color) {
+  text-shadow: 0 2px 3px $color, 0 1px 1.5px $color;
+}

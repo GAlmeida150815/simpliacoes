@@ -1,0 +1,233 @@
+.infinite-scroll-component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .post {
+    padding: 2rem;
+    width: 644px;
+    img {
+      width: 100%;
+      max-height: 616px;
+      border: 1px inset black;
+      border-radius: 5px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
+                  0 6px 20px rgba(0, 0, 0, 0.1); 
+
+      &:hover {
+        transform: scale(1.01); 
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 
+                    0 12px 40px rgba(0, 0, 0, 0.2); 
+      }
+    }
+
+    .under-img {
+      margin-left: 0;
+      margin-right: 0;
+      padding: 5px;
+      .socials {
+        a {
+          padding: 5px;
+          font-size: 25px;
+          color: black;
+          svg {
+            transition: transform ease 0.3s, color ease 0.3s;
+          }
+          
+          &:hover {
+            svg {
+              transform: scale(1.1);
+              color: mix(white, black, 25%);
+            }
+          }
+          
+          &:active {
+            svg {
+              transform: scale(0.85);
+              color: mix(white, black, 75%);
+
+            }
+          }
+        }
+      }
+      .date {
+        margin-left: auto;
+        font-size: small;
+      }
+    }
+    
+    .post-topics {
+      svg {
+        
+      }
+    }
+
+    .divider {
+      margin: {
+        top: 25px;
+        bottom: 25px; 
+      }
+      border-bottom: 1px inset gray;
+    }
+  
+
+    .readmore {
+      color: mix(white, black,50%); 
+      transition: color ease 0.3s;
+      font-weight: bold;
+      &:hover {
+        color: mix(white, black, 75%); 
+      }
+    }
+    
+    .title {
+      font-weight: bold;
+    }
+  }
+}
+
+
+.modal-share {
+  .modal-content {
+    .modal-header {
+      .title {
+        margin: {
+          left: auto;
+          right: auto;
+        }
+      }
+      border-bottom: unset;
+      padding: 10px;
+      font-size: 1.15rem;
+      .close {
+        margin: -1rem;
+        font-size: 1.5rem;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+        
+        &:active {
+          transform: scale(0.85);
+        }
+      }
+    }
+    .modal-body {
+      padding: 15px;
+      display: flex;
+      justify-content: space-evenly;
+      a {
+        font-size: 37.5px;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+        
+        &:active {
+          transform: scale(0.85);
+        }
+      }
+      .facebook {
+        color: $facebook;
+      }
+      .whatsapp {
+        color: $whatsapp;
+      }
+      .linkedin {
+        color: $linkedin;
+      }
+      .twitter {
+        color: $twitter;
+      }
+    }
+  }
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  .topics-clear {
+    transition: transform 0.3s ease, color 0.3s ease;
+    &:hover {
+      transform: scale(1.1);
+      color: gray;
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+}
+
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+  transform-origin: left;  
+
+  .checkbox-svg {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .checkbox-label {
+    cursor: inherit;
+
+    transition: font-weight 0.3s ease;
+  }
+
+  &.checked {
+    .checkbox-label {
+      font-weight: bold;
+    }
+  } 
+
+  &:hover {
+    .checkbox-svg {
+      transform: scale(1.2);
+    }
+  }
+  &:active {
+    transform: scale(0.8);
+  }
+}
+
+
+@media (max-width: 1263px) {
+  .infinite-scroll-component {
+    .post {
+      width: 466px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .infinite-scroll-component {
+    .post {
+      width: 100%;
+      .title {
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  .filters {
+    .topic-group {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}
+
+

@@ -1,0 +1,37 @@
+.section-products {
+  .product-img img{
+    transition: transform 0.3s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .product-link {
+    transition: color 0.3s ease;
+    &:hover {
+      color: gray;
+    }
+  }
+
+  
+}
+
+@media (min-width: 768px) {
+  .section-excels {
+    #excels {
+      div div:not(:last-of-type) {
+        border-right: 1.75px dotted gray;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .section-excels {
+    #excels {
+      .excel-desc:not(:last-of-type) {
+        border-bottom: 1.75px dotted gray;
+      }
+    }
+  }
+}

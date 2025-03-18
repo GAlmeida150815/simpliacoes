@@ -1,0 +1,45 @@
+//
+// Modal
+//
+
+
+// Fluid modal
+
+
+.modal-open {
+  overflow: scroll !important;
+}
+
+.modal-fluid {
+    .modal-dialog {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .modal-content {
+        border-radius: 0;
+    }
+}
+
+.modal-content-transparent {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
+    .spinner-wrapper {
+        text-align: center;
+        width: 100%;
+    }
+}
+  
+  
+
+// Background color variations
+
+@each $color, $value in $theme-colors {
+    .modal-#{$color} {
+        @include modal-variant($value);
+    }
+}
