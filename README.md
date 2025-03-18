@@ -64,6 +64,8 @@
 * [![React][React.js]][React-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 * [![Node][Node.js]][Node-url]
+* [![SASS][SASS.com]][SASS-url]
+* [![CSS][CSS.com]][CSS-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -123,6 +125,7 @@ Project Link: [https://simpliacoes.pt](https://simpliacoes.pt)
 - [React](https://reactjs.org/) for the front-end framework
 - [Node.js](https://nodejs.org/) for the backend environment
 - [Bootstrap](https://getbootstrap.com/) for the UI components
+- [SASS](https://sass-lang.com) for an easier UI management
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
@@ -142,9 +145,22 @@ Project Link: [https://simpliacoes.pt](https://simpliacoes.pt)
 
 [project-banner]: images_readme/banner.png
 
+
+<!-- JavaScript -->
+[JavaScript]: https://img.shields.io/badge/JavaScript-20232A?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E
+[JavaScript-url]: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/
+<!-- React -->
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
+<!-- Bootstrap -->
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
+<!-- Node -->
 [Node.js]: https://img.shields.io/badge/Node.js-20232A?style=for-the-badge&logo=nodedotjs&logoColor=%235FA04E
 [Node-url]: https://nodejs.org/en
+<!-- SASS -->
+[SASS.com]: https://img.shields.io/badge/SASS-20232A?style=for-the-badge&logo=sass&logoColor=%23CC6699
+[SASS-url]: https://sass-lang.com
+<!-- CSS -->
+[CSS.com]: https://img.shields.io/badge/CSS-20232A?style=for-the-badge&logo=css&logoColor=%23663399
+[CSS-url]: https://www.w3schools.com/css/
